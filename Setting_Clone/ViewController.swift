@@ -3,14 +3,34 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var settingModel = [[SettingModel]]() // String[]
 
     @IBOutlet weak var settingTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//      처음에 호출되면 생성되도록 만듦
+        func makeData() {
+            settingModel.append(
+            [SettingModel(leftImageName: "person.circle", menuTitle: "iphone에 로그인", subTitle: "iCloud, App Store 등 설정", rightImageName: nil)]
+            )
+            
+            settingModel.append(
+//          3개짜리 Array를 생성함
+            [SettingModel(leftImageName: "gear", menuTitle: "일반", subTitle: nil, rightImageName: "chevron.right"),
+            
+            SettingModel(leftImageName: "person.fill", menuTitle: "손쉬운 사용", subTitle: nil, rightImageName: "chevron.right"),
+            
+            SettingModel(leftImageName: "hand.raised.fill", menuTitle: "개인 정보 보호", subTitle: nil, rightImageName: "chevron.right")]
+            )
+        }
+        
+        
         settingTableView.delegate = self
         settingTableView.dataSource = self
+        settingTableView.backgroundColor = UIColor(white: 245/255, alpha: 1)
+        makeData()
         
 //      TableView 사용규칙
 //      let nib = UINib(nibName: "ProfileCell", bundle: nil)
@@ -25,25 +45,44 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-//      갯수를 리턴한다
+//      갯수를 리턴한다 ex/ return 5;
+        return settingModel[section].count     // section의 갯수만큼
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return settingModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
             //      어떤걸 보여줄거니?
                     let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath)
-                    
+                    as! ProfileCell
+            
+                    cell.topTitle.text = settingModel[indexPath.section][indexPath.row].menuTitle
+                    cell.profileImageView.image = UIImage(systemName: settingModel[indexPath.section][indexPath.row].leftImageName)
+                    cell.bottomDescription.text = settingModel[indexPath.section][indexPath.row].subTitle
+            
+            
                     return cell
             //      무조건 이 cell만 나타내주겠다!
         }
         
-        //      어떤걸 보여줄거니?
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath)
+//      어떤걸 보여줄거니?
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
+        
+        cell.leftImageView.image = UIImage(systemName: settingModel[indexPath.section][indexPath.row].leftImageName)
                 
-                return cell
-        //      무조건 이 cell만 나타내주겠다!
+        cell.leftImageView.tintColor = .systemRed
+        
+        cell.middleTitle.text = settingModel[indexPath.section][indexPath.row].menuTitle
+                
+        cell.rightImageView.image = UIImage(systemName: settingModel[indexPath.section][indexPath.row].rightImageName ?? "")
+//              값 없으면 그냥 빈 String return
+        
+        return cell
+//      무조건 이 cell만 나타내주겠다!
         
     }
     

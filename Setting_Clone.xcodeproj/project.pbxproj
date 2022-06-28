@@ -20,6 +20,7 @@
 		9C55DAC9286ADCA100F0324E /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55DAC7286ADCA100F0324E /* ProfileCell.xib */; };
 		9C55DACC286AEC4700F0324E /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DACA286AEC4700F0324E /* MenuCell.swift */; };
 		9C55DACD286AEC4700F0324E /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55DACB286AEC4700F0324E /* MenuCell.xib */; };
+		9C55DACF286AF1B700F0324E /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DACE286AF1B700F0324E /* SettingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		9C55DAC7286ADCA100F0324E /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		9C55DACA286AEC4700F0324E /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		9C55DACB286AEC4700F0324E /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		9C55DACE286AF1B700F0324E /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				9C55DA96286AB84C00F0324E /* AppDelegate.swift */,
 				9C55DA98286AB84C00F0324E /* SceneDelegate.swift */,
 				9C55DA9A286AB84C00F0324E /* ViewController.swift */,
+				9C55DACE286AF1B700F0324E /* SettingModel.swift */,
 				9C55DA9C286AB84C00F0324E /* Main.storyboard */,
 				9C55DAC6286ADCA100F0324E /* ProfileCell.swift */,
 				9C55DAC7286ADCA100F0324E /* ProfileCell.xib */,
@@ -274,6 +277,7 @@
 			files = (
 				9C55DA9B286AB84C00F0324E /* ViewController.swift in Sources */,
 				9C55DACC286AEC4700F0324E /* MenuCell.swift in Sources */,
+				9C55DACF286AF1B700F0324E /* SettingModel.swift in Sources */,
 				9C55DAC8286ADCA100F0324E /* ProfileCell.swift in Sources */,
 				9C55DA97286AB84C00F0324E /* AppDelegate.swift in Sources */,
 				9C55DA99286AB84C00F0324E /* SceneDelegate.swift in Sources */,
