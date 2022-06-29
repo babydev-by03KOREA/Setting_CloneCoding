@@ -16,6 +16,12 @@ class ViewController: UIViewController {
             [SettingModel(leftImageName: "person.circle", menuTitle: "iphone에 로그인", subTitle: "iCloud, App Store 등 설정", rightImageName: nil)]
             )
             
+//          스크린타임 추가생성
+            
+            settingModel.append(
+                [SettingModel(leftImageName: "hourglass", menuTitle: "스크린 타임", subTitle: nil, rightImageName: "chevron.right")]
+            )
+            
             settingModel.append(
 //          3개짜리 Array를 생성함
             [SettingModel(leftImageName: "gear", menuTitle: "일반", subTitle: nil, rightImageName: "chevron.right"),
@@ -31,6 +37,10 @@ class ViewController: UIViewController {
         settingTableView.dataSource = self
         settingTableView.backgroundColor = UIColor(white: 245/255, alpha: 1)
         makeData()
+        
+//      설정 타이틀 작성하기
+        self.title = "설정"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
 //      TableView 사용규칙
 //      let nib = UINib(nibName: "ProfileCell", bundle: nil)

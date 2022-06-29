@@ -2,6 +2,7 @@
 import Foundation
 
 struct SettingModel {
+//  Java의 Interface와 비슷
 //  초기값이 필요하면 ""로 지정할것
     var leftImageName: String = ""
     var menuTitle: String = ""

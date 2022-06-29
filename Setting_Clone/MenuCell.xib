@@ -20,8 +20,10 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-Na-SaH">
                         <rect key="frame" x="40" y="54" width="40" height="40"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="X7J-ya-RO1"/>
                             <constraint firstAttribute="width" constant="40" id="gYx-Jd-ilo"/>
                             <constraint firstAttribute="height" constant="40" id="uOR-nB-4Xn"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="uQm-Jt-NjK"/>
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6g0-c5-jLo">
