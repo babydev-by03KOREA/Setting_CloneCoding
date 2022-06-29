@@ -12,12 +12,13 @@ class ViewController: UIViewController {
         
 //      처음에 호출되면 생성되도록 만듦
         func makeData() {
+            
+//          Apple ID
             settingModel.append(
             [SettingModel(leftImageName: "person.circle", menuTitle: "iphone에 로그인", subTitle: "iCloud, App Store 등 설정", rightImageName: nil)]
             )
             
-//          스크린타임 추가생성
-            
+//          스크린타임 추가생성 - 나눠놓아야 Section분리됨
             settingModel.append(
                 [SettingModel(leftImageName: "hourglass", menuTitle: "스크린 타임", subTitle: nil, rightImageName: "chevron.right")]
             )
@@ -30,6 +31,12 @@ class ViewController: UIViewController {
             
             SettingModel(leftImageName: "hand.raised.fill", menuTitle: "개인 정보 보호", subTitle: nil, rightImageName: "chevron.right")]
             )
+            
+            settingModel.append([SettingModel(leftImageName: "key.fill", menuTitle: "암호", subTitle: nil, rightImageName: "chevron.right")])
+            
+            settingModel.append([SettingModel(leftImageName: "safari.fill", menuTitle: "Safari", subTitle: nil, rightImageName: "chevron.right"),
+                                
+                SettingModel(leftImageName: "newspaper.fill", menuTitle: "News", subTitle: nil, rightImageName: "chevron.right")])
         }
         
         
